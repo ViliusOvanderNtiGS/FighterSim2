@@ -8,5 +8,17 @@ namespace FighterSim2
 
         Random generator = new Random();
 
+        public string name = "";
+
+
+        public int Damage()
+        {
+
+            int r = generator.Next(5, 25);
+
+            return r;
+
+        }
+
     }
 }

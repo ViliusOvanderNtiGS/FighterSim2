@@ -8,6 +8,8 @@ namespace FighterSim2
         {
             Fighter player = new Fighter();
             Fighter opponent = new Fighter();
+            Weapons pWeapon = new Weapons();
+            Weapons oWeapon = new Weapons();
 
             player.name = "bolgor";
             opponent.name = "golvor";
@@ -20,13 +22,25 @@ namespace FighterSim2
             opponent.name = Console.ReadLine();
             Console.Clear();
 
+            System.Console.WriteLine("Vad heter ditt vapen?");
+            pWeapon.name = Console.ReadLine();
+            System.Console.WriteLine("Vad heter din fiendes vapen?");
+            oWeapon.name = Console.ReadLine();
+            Console.Clear();
 
+            while (player.hp >= 0 && opponent.hp >= 0)
+            {
 
+                System.Console.WriteLine(player.name + " använder " + pWeapon.name + " och gör " + "antal hp görlorat" + " skada mot " + opponent.name);
+                System.Console.WriteLine(opponent.name + " använder " + oWeapon.name + " och gör " + "antal hp görlorat" + " skada mot " + player.name);
+                System.Console.WriteLine(player.name + " har nu " + player.hp + " hp kvar.");
+                System.Console.WriteLine(opponent.name + " har kvar " + opponent.hp + " hp kvar.");
+                Console.ReadLine();
 
-            // while (true)
-            // {
+            }
+            System.Console.WriteLine("unfunny");
+            Console.ReadLine();
 
-            // }
 
         }
     }
