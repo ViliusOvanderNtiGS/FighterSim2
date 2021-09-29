@@ -16,9 +16,14 @@ namespace FighterSim2
 
             int r = generator.Next(5, 25);
 
+            //public int antalSkada = r;
             return r;
 
         }
+
+
+
+
 
     }
 }

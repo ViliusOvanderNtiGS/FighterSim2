@@ -30,12 +30,18 @@ namespace FighterSim2
 
             while (player.hp >= 0 && opponent.hp >= 0)
             {
+                int oDamage = oWeapon.Damage();
+                int pDamage = pWeapon.Damage();
 
-                System.Console.WriteLine(player.name + " använder " + pWeapon.name + " och gör " + "antal hp görlorat" + " skada mot " + opponent.name);
-                System.Console.WriteLine(opponent.name + " använder " + oWeapon.name + " och gör " + "antal hp görlorat" + " skada mot " + player.name);
+                player.hp = player.hp - oDamage;
+                opponent.hp = opponent.hp - pDamage;
+
+                System.Console.WriteLine(player.name + " använder " + pWeapon.name + " och gör " + oDamage + " skada mot " + opponent.name);
+                System.Console.WriteLine(opponent.name + " använder " + oWeapon.name + " och gör " + pDamage + " skada mot " + player.name);
                 System.Console.WriteLine(player.name + " har nu " + player.hp + " hp kvar.");
                 System.Console.WriteLine(opponent.name + " har kvar " + opponent.hp + " hp kvar.");
                 Console.ReadLine();
+                Console.Clear();
 
             }
             System.Console.WriteLine("unfunny");
