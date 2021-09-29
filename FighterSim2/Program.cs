@@ -44,7 +44,23 @@ namespace FighterSim2
                 Console.Clear();
 
             }
-            System.Console.WriteLine("unfunny");
+
+            if (player.hp > opponent.hp)
+            {
+                Console.WriteLine(player.name + " vann!");
+                Console.WriteLine(opponent.name + " luktar");
+            }
+            if (player.hp < opponent.hp)
+            {
+                Console.WriteLine(opponent.name + " vann!");
+                Console.WriteLine(player.name + " luktar");
+            }
+            if (player.hp == opponent.hp)
+            {
+                Console.WriteLine("Ingen vann");
+                Console.WriteLine("Båda luktar");
+            }
+
             Console.ReadLine();
 
 
